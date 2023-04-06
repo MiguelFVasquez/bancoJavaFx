@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="200.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BancoController">
+   <children>
+      <Label layoutX="238.0" layoutY="14.0" text="Banco JavaFx">
+         <font>
+            <Font name="Baskerville Old Face" size="22.0" />
+         </font></Label>
+      <Label layoutX="35.0" layoutY="64.0" text="¿Qué tipo de cuenta quiere crear?" AnchorPane.leftAnchor="35.0" />
+      <VBox layoutX="36.0" layoutY="90.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <RadioButton fx:id="rbtnAhorro" mnemonicParsing="false" text="Ahorro">
+               <toggleGroup>
+                  <ToggleGroup fx:id="tiposDeCuenta" />
+               </toggleGroup>
+               <VBox.margin>
+                  <Insets top="12.0" />
+               </VBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="rbtnCorriente" mnemonicParsing="false" text="Corriente" toggleGroup="$tiposDeCuenta">
+               <VBox.margin>
+                  <Insets top="12.0" />
+               </VBox.margin>
+            </RadioButton>
+         </children>
+      </VBox>
+      <Button fx:id="btnAceptarPrincipal" layoutX="186.0" layoutY="218.0" mnemonicParsing="false" onAction="#aceptarPrincipal" text="Aceptar" />
+      <Button fx:id="btnCerrarPrincipal" layoutX="301.0" layoutY="218.0" mnemonicParsing="false" onAction="#cerrarPrincipal" text="Cerrar" />
+      <Separator layoutX="25.0" layoutY="40.0" prefHeight="0.0" prefWidth="559.0" />
+      <Separator layoutX="16.0" layoutY="205.0" prefHeight="3.0" prefWidth="559.0" />
+   </children>
+</AnchorPane>
